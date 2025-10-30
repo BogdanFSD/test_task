@@ -1,0 +1,30 @@
+{
+  "name": "test_task",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "tsx LicensePlateProblem.ts",
+    "build": "tsc -p tsconfig.json",
+    "run:compiled": "node ./dist/index.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogdanFSD/test_task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BogdanFSD/test_task/issues"
+  },
+  "homepage": "https://github.com/BogdanFSD/test_task#readme",
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsx": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
