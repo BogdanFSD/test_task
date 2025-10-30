@@ -20,5 +20,6 @@
     // Helpful DX
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.ts"]
+  "include": ["tasks/**/*.ts", "tests/**/*.ts"]
+
 }

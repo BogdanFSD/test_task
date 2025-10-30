@@ -5,10 +5,10 @@
   "type": "module",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "tsx LicensePlateProblem.ts",
     "build": "tsc -p tsconfig.json",
-    "run:compiled": "node ./dist/index.js",
-    "test": "echo \"No tests yet\" && exit 0"
+    "run:algorithms": "npx tsx tasks/algorithms_collection/src/showcase.ts",
+    "run:concurrency": "npx tsx tasks/concurrency_fetch/src/concurrencyFetch.ts",
+    "test": "npx tsx --test \"tasks/**/tests/**/*.test.ts\""
   },
   "repository": {
     "type": "git",
