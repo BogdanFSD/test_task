@@ -29,6 +29,8 @@ npm install
 - Node.js 18+ (for native `fetch` and `AbortSignal.timeout`)
 - TypeScript 5.9+
 
+[↑ Back to Table of Contents](#table-of-contents)
+
 ---
 
 ## Task 1: Concurrent URL Fetching
@@ -211,6 +213,8 @@ npm run test:fetch2       # Advanced implementation tests
 npm run test:integration  # Server integration tests
 npm run test:all-fetch    # All fetch-related tests
 ```
+
+[↑ Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -397,6 +401,8 @@ Shows:
 
 **Winner:** Algorithm A (Block Arithmetic) - Best balance of speed and correctness
 
+[↑ Back to Table of Contents](#table-of-contents)
+
 ---
 
 ## 🧪 Running Tests
@@ -414,6 +420,8 @@ npm run test:all-fetch       # All fetch tests (23 tests)
 # Build TypeScript
 npm run build
 ```
+
+[↑ Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -453,6 +461,8 @@ test_task/
 └── README.md                       # This file
 ```
 
+[↑ Back to Table of Contents](#table-of-contents)
+
 ---
 
 # 🎯 Key Features
@@ -471,6 +481,8 @@ test_task/
 - ✅ Detailed explanations and visualizations
 - ✅ Comprehensive benchmarking
 - ✅ Validation tests
+
+[↑ Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -527,6 +539,8 @@ console.log(getPlateA(999999));     // "999999"
 console.log(getPlateA(1000000));    // "00000A"
 console.log(getPlateA(3600000));    // "0000AA"
 ```
+
+[↑ Back to Table of Contents](#table-of-contents)
 
 ---
 
