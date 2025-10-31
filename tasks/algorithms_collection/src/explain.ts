@@ -53,7 +53,7 @@ export function explain(n: number): void {
 
   const result =
     digitsPadded(digitPart, digitsCount) + lettersFromIndex(letterPart, lettersCount);
-  console.log(`\n✅ Final plate = ${result}\n`);
+  console.log(`\n Final plate = ${result}\n`);
 }
 
 /* Run interactively from command line:

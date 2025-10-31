@@ -1,14 +1,25 @@
 {
   "name": "test_task",
   "version": "1.0.0",
-  "description": "",
+  "description": "Two coding challenge solutions: Concurrent URL fetching and DMV License Plate generation",
   "type": "module",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "run:algorithms": "npx tsx tasks/algorithms_collection/src/showcase.ts",
-    "run:concurrency": "npx tsx tasks/concurrency_fetch/src/concurrencyFetch.ts",
-    "test": "npx tsx --test \"tasks/**/tests/**/*.test.ts\""
+
+    "plate:showcase": "npx tsx tasks/algorithms_collection/src/showcase.ts",
+    "plate:explain": "npx tsx tasks/algorithms_collection/src/explain.ts",
+    "plate:winner": "npx tsx tasks/algorithms_collection/src/verbose_demo_winner.ts",
+
+    "fetch:demo": "npx tsx tasks/concurrency_fetch/src/concurrencyFetch.ts",
+    "fetch:demo2": "npx tsx tasks/concurrency_fetch/src/concurrencyFetch2Demo.ts",
+    "fetch:server": "npx tsx tasks/concurrency_fetch/server/localServer.ts",
+
+    "test": "npx tsx --test \"tasks/**/tests/**/*.test.ts\"",
+    "test:fetch": "npx tsx --test tasks/concurrency_fetch/tests/fetchAllWithConcurrency.test.ts",
+    "test:fetch2": "npx tsx --test tasks/concurrency_fetch/tests/fetchAllWithConcurrency2.test.ts",
+    "test:integration": "npx tsx --test tasks/concurrency_fetch/tests/integration.local.test.ts",
+    "test:all-fetch": "npm run test:fetch && npm run test:fetch2 && npm run test:integration"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,7 @@ const urls = [
   const max = Number(process.env.MAX_CONCURRENCY ?? 2);
   console.time(`fetchAllWithConcurrency(max=${max})`);
   const responses = await fetchAllWithConcurrency(urls, max);
-  const statuses = await Promise.all(responses.map(r => r.status));
+  const statuses = responses.map(r => r.status);
   console.timeEnd(`fetchAllWithConcurrency(max=${max})`);
   console.log("Statuses (order preserved):", statuses);
 }

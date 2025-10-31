@@ -57,21 +57,27 @@ function runBenchmarks() {
   console.log("• total = total runtime for all calls\n");
 
   const tests = [
-    { name: "A  Block arithmetic (✅ Correct, fastest)", fn: getPlateA },
-    { name: "B  Binary search (✅ Correct, slightly slower)", fn: getPlateB },
-    { name: "C  Sequential (✅ Correct, but very slow)", fn: getPlateC },
-    { name: "D  Base-36 (❌ Wrong order, ultra fast)", fn: getPlateD_Base36 },
+    { name: "A  Block arithmetic (✅ Correct, fastest)", fn: getPlateA, maxRuns: Infinity },
+    { name: "B  Binary search (✅ Correct, slightly slower)", fn: getPlateB, maxRuns: Infinity },
+    { name: "C  Sequential (✅ Correct, but very slow)", fn: getPlateC, maxRuns: 1000 },
+    { name: "D  Base-36 (❌ Wrong order, ultra fast)", fn: getPlateD_Base36, maxRuns: Infinity },
   ] as const;
 
-  const runCounts = [10, 100, 1_000, 10_000, 100_000];
+  const runCounts = [100, 1_000, 10_000];
 
   for (const runs of runCounts) {
     console.log(`\n📊 Running ${runs.toLocaleString()} random calls...`);
-    for (const { name, fn } of tests) {
-      const { total, avg } = benchmark(fn, runs, 10_000_000);
-      console.log(
-        `  ${name.padEnd(45)} → total=${total.toFixed(3).padStart(8)} ms | avg=${avg.toFixed(6)} ms`
-      );
+    for (const { name, fn, maxRuns } of tests) {
+      if (runs > maxRuns) {
+        console.log(
+          `  ${name.padEnd(45)} → skipped (too slow for ${runs.toLocaleString()} runs)`
+        );
+      } else {
+        const { total, avg } = benchmark(fn, runs, 10_000_000);
+        console.log(
+          `  ${name.padEnd(45)} → total=${total.toFixed(3).padStart(8)} ms | avg=${avg.toFixed(6)} ms`
+        );
+      }
     }
   }
 
