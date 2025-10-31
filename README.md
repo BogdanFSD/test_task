@@ -6,11 +6,11 @@ This repository contains solutions to two algorithmic coding challenges with com
 
 ## Table of Contents
 
-- [Installation](#-installation)
-- [Task 1: Concurrent URL Fetching](#-task-1-concurrent-url-fetching)
-- [Task 2: DMV License Plate Generator](#-task-2-dmv-license-plate-generator)
+- [Installation](#installation)
+- [Task 1: Concurrent URL Fetching](#task-1-concurrent-url-fetching)
+- [Task 2: DMV License Plate Generator](#task-2-dmv-license-plate-generator)
 - [Running Tests](#-running-tests)
-- [Project Structure](#-project-structure)
+- [Project Structure](#project-structure)
 
 ---
 
